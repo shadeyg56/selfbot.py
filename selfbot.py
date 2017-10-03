@@ -130,7 +130,7 @@ async def send_cmd_help(ctx):
         print('Sent command help')
 
 @bot.event
-async def on_command_error(error, ctx):
+async def on_command_error(ctx, error):
    print(error)
    channel = ctx.message.channel
    if isinstance(error, commands.MissingRequiredArgument):
