@@ -112,7 +112,7 @@ class Utility:
         await self.bot.say('\n'.join(map(to_string, characters)))
 
     @commands.command(pass_context=True)
-    async def quote(self, ctx, id : str, chan=None: str):
+    async def quote(self, ctx, id : str, chan= discord.channel=None):
         """Quote someone's message by ID"""
         channel = chan or ctx.message.channel
         await self.bot.delete_message(ctx.message)
